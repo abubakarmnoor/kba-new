@@ -1,0 +1,351 @@
+# Copyright (C) 2024 villavista
+# This file is distributed under the same license as the villavista package.
+msgid ""
+msgstr ""
+"Project-Id-Version: villavista\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2024-05-26 16:51+0000\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-KeywordsList: __;_e;_ex:1,2c;_n:1,2;_n_noop:1,2;_nx:1,2,4c;_nx_noop:1,2,3c;_x:1,2c;esc_attr__;esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.js\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../functions.php:32, ../patterns/footer.php:63
+msgid "VillaVista"
+msgstr ""
+
+#: ../patterns/404.php:14
+msgid "404: Page Not Disco-vered"
+msgstr ""
+
+#: ../patterns/404.php:18
+msgid "Looks like the dance floor is empty here! This page has done a disappearing act. Head back to the main stage by clicking the navigation links, and let's keep the party going!"
+msgstr ""
+
+#: ../patterns/404.php:25
+msgid "Go to home page"
+msgstr ""
+
+#: ../patterns/about.php:54
+msgid "About Us"
+msgstr ""
+
+#: ../patterns/about.php:58
+msgid "Fusce egestas elit eget lorem. Praesent nec nisl a purus blandit viverra. Praesent egestas neque eu enim. In ac felis quis tortor malesuada pretium. Aenean tellus metus, bibendum sed, posuere ac, mattis non, nunc.Fusce egestas elit eget lorem. Praesent nec nisl a purus blandit viverra. Praesent egestas neque eu enim. In ac felis quis tortor malesuada pretium. Aenean tellus metus, bibendum sed, posuere ac, mattis non, nunc....."
+msgstr ""
+
+#: ../patterns/about.php:63
+msgid "Read More"
+msgstr ""
+
+#: ../patterns/about.php:71
+msgid "50+"
+msgstr ""
+
+#: ../patterns/about.php:75
+msgid "Award Winning"
+msgstr ""
+
+#: ../patterns/about.php:81
+msgid "100+"
+msgstr ""
+
+#: ../patterns/about.php:85, ../patterns/banner.php:14, ../patterns/call-to-actions.php:22
+msgid "Villa"
+msgstr ""
+
+#: ../patterns/about.php:91
+msgid "500K"
+msgstr ""
+
+#: ../patterns/about.php:95
+msgid "Happy Members"
+msgstr ""
+
+#: ../patterns/archive-product.php:55
+msgid " No products were found matching your selection. "
+msgstr ""
+
+#: ../patterns/archive.php:48, ../patterns/blog-left.php:54, ../patterns/blog-right.php:51, ../patterns/post.php:51, ../patterns/search.php:54
+msgid "No posts found"
+msgstr ""
+
+#: ../patterns/articles.php:12
+msgid "Latest Articles"
+msgstr ""
+
+#: ../patterns/articles.php:16
+msgid "Let's Checkout Our All"
+msgstr ""
+
+#: ../patterns/articles.php:16
+msgid "Latest News"
+msgstr ""
+
+#: ../patterns/articles.php:54
+msgid "View All Article"
+msgstr ""
+
+#: ../patterns/banner.php:14, ../patterns/call-to-actions.php:22
+msgid "Unforgettable Moments Await: Stay in Our Exquisite"
+msgstr ""
+
+#: ../patterns/banner.php:18
+msgid "Fusce egestas elit eget lorem. Praesent nec nisl a purus blandit viverra. Praesent egestas neque eu enim. In ac felis quis tortor malesuada pretium. Aenean tellus metus, bibendum sed, posuere ac, mattis non, nunc."
+msgstr ""
+
+#: ../patterns/banner.php:23, ../patterns/call-to-actions.php:31, ../patterns/header.php:37, ../patterns/services.php:35, ../patterns/services.php:63, ../patterns/services.php:87, ../patterns/services.php:113, ../patterns/services.php:141, ../patterns/services.php:165
+msgid "Book Now"
+msgstr ""
+
+#: ../patterns/banner.php:27
+msgid "View Our Villa"
+msgstr ""
+
+#: ../patterns/blog-left.php:9
+msgid "Blog Left Sidebar"
+msgstr ""
+
+#: ../patterns/blog-right.php:10
+msgid "Blog Right Sidebar"
+msgstr ""
+
+#: ../patterns/call-to-actions.php:26
+msgid "Fusce egestas elit eget lorem. Praesent nec nisl a purus blandit viverra. Praesent egestas neque eu enim. In ac felis quis tortor malesuada pretium. Aenean tellus metus, bibendum sed, posuere ac, mattis non, nunc.Fusce egestas elit eget lorem.."
+msgstr ""
+
+#: ../patterns/cart.php:18
+msgid "You may be interested in…"
+msgstr ""
+
+#: ../patterns/cart.php:74
+msgid "Your cart is currently empty!"
+msgstr ""
+
+#: ../patterns/cart.php:82
+msgid "New in store"
+msgstr ""
+
+#: ../patterns/footer.php:14
+msgid "Stay in the Loop: Subscribe to Our Newsletter!"
+msgstr ""
+
+#: ../patterns/footer.php:18
+msgid "Add your form shortcode"
+msgstr ""
+
+#: ../patterns/footer.php:44
+msgid "+01-123-4567"
+msgstr ""
+
+#: ../patterns/footer.php:54
+msgid "Yourmail@example.com"
+msgstr ""
+
+#: ../patterns/footer.php:67
+msgid "Fusce egestas elit eget lorem. Praesent nec nisl a purus blandit viverra. Praesent egestas..."
+msgstr ""
+
+#: ../patterns/our-villa.php:13
+msgid "Our Villa "
+msgstr ""
+
+#: ../patterns/our-villa.php:19, ../patterns/villa-collection.php:19
+msgid "Fusce egestas elit eget lorem. Praesent nec nisl a purus blandit viverra. Praesent egestas neque eu enim. In ac felis quis tortor malesuada pretium. Aenean"
+msgstr ""
+
+#: ../patterns/our-villa.php:32
+msgid "Sea View Villa"
+msgstr ""
+
+#: ../patterns/our-villa.php:37, ../patterns/our-villa.php:87, ../patterns/our-villa.php:133, ../patterns/our-villa.php:183
+msgid "$120/Night"
+msgstr ""
+
+#: ../patterns/our-villa.php:41, ../patterns/our-villa.php:91, ../patterns/our-villa.php:137, ../patterns/our-villa.php:187
+msgid "-10% Discount"
+msgstr ""
+
+#: ../patterns/our-villa.php:47, ../patterns/our-villa.php:59, ../patterns/our-villa.php:97, ../patterns/our-villa.php:109, ../patterns/our-villa.php:143, ../patterns/our-villa.php:155, ../patterns/our-villa.php:205
+msgid "Spa"
+msgstr ""
+
+#: ../patterns/our-villa.php:51, ../patterns/our-villa.php:101, ../patterns/our-villa.php:147, ../patterns/our-villa.php:197
+msgid "Swimming Pool"
+msgstr ""
+
+#: ../patterns/our-villa.php:55, ../patterns/our-villa.php:105, ../patterns/our-villa.php:151, ../patterns/our-villa.php:201
+msgid "GYM"
+msgstr ""
+
+#: ../patterns/our-villa.php:65, ../patterns/our-villa.php:115, ../patterns/our-villa.php:161, ../patterns/our-villa.php:211, ../patterns/villa-collection.php:33, ../patterns/villa-collection.php:43, ../patterns/villa-collection.php:57, ../patterns/villa-collection.php:67
+msgid "Book This Villa"
+msgstr ""
+
+#: ../patterns/our-villa.php:82
+msgid "Nature View Villa"
+msgstr ""
+
+#: ../patterns/our-villa.php:128
+msgid "Front View Villa"
+msgstr ""
+
+#: ../patterns/our-villa.php:178
+msgid "Mountain View Villa"
+msgstr ""
+
+#: ../patterns/our-villa.php:193
+msgid "Bed & Breakfast"
+msgstr ""
+
+#: ../patterns/post.php:10
+msgid "Blog"
+msgstr ""
+
+#: ../patterns/pricing-plan.php:12
+msgid "Price & Package"
+msgstr ""
+
+#: ../patterns/pricing-plan.php:16
+msgid "Choose Your Suitable Package"
+msgstr ""
+
+#: ../patterns/pricing-plan.php:24
+msgid "Normal"
+msgstr ""
+
+#: ../patterns/pricing-plan.php:28
+msgid "$99.99/"
+msgstr ""
+
+#: ../patterns/pricing-plan.php:28, ../patterns/pricing-plan.php:76, ../patterns/pricing-plan.php:124
+msgid "Person"
+msgstr ""
+
+#: ../patterns/pricing-plan.php:32, ../patterns/pricing-plan.php:80, ../patterns/pricing-plan.php:128
+msgid "Nulla neque dolor, sagittis eget, iaculis quis, molestie non, velit. Cras id dui. Vestibulum purus quam, scelerisque ..."
+msgstr ""
+
+#: ../patterns/pricing-plan.php:40
+msgid "feature First"
+msgstr ""
+
+#: ../patterns/pricing-plan.php:44, ../patterns/pricing-plan.php:92, ../patterns/pricing-plan.php:140
+msgid "Feature Second"
+msgstr ""
+
+#: ../patterns/pricing-plan.php:48
+msgid "Feature Third "
+msgstr ""
+
+#: ../patterns/pricing-plan.php:52, ../patterns/pricing-plan.php:100, ../patterns/pricing-plan.php:148
+msgid "Feature Fourth"
+msgstr ""
+
+#: ../patterns/pricing-plan.php:56, ../patterns/pricing-plan.php:104, ../patterns/pricing-plan.php:152
+msgid "Feature Fifth"
+msgstr ""
+
+#: ../patterns/pricing-plan.php:63, ../patterns/pricing-plan.php:88, ../patterns/pricing-plan.php:111, ../patterns/pricing-plan.php:159
+msgid "Book This Package"
+msgstr ""
+
+#: ../patterns/pricing-plan.php:72
+msgid "Economic"
+msgstr ""
+
+#: ../patterns/pricing-plan.php:96, ../patterns/pricing-plan.php:144
+msgid "Feature Third"
+msgstr ""
+
+#: ../patterns/pricing-plan.php:120
+msgid "Deluxe"
+msgstr ""
+
+#: ../patterns/pricing-plan.php:136
+msgid "Feature First"
+msgstr ""
+
+#: ../patterns/services.php:12
+msgid "Why Should"
+msgstr ""
+
+#: ../patterns/services.php:12
+msgid "Choose Us"
+msgstr ""
+
+#: ../patterns/services.php:26
+msgid "Ultimate Comfort"
+msgstr ""
+
+#: ../patterns/services.php:30, ../patterns/services.php:58, ../patterns/services.php:82, ../patterns/services.php:108, ../patterns/services.php:136, ../patterns/services.php:160
+msgid "Nullam dictum felis eu pede mollis pretium. Vestibulum suscipit nulla quis orci. Donec interdum"
+msgstr ""
+
+#: ../patterns/services.php:54
+msgid "Flexible Cancellation Policy"
+msgstr ""
+
+#: ../patterns/services.php:78
+msgid "Outdoor Living Spaces"
+msgstr ""
+
+#: ../patterns/services.php:104
+msgid "Breathtaking Views"
+msgstr ""
+
+#: ../patterns/services.php:132
+msgid "Private Pool"
+msgstr ""
+
+#: ../patterns/services.php:156
+msgid "Luxurious Bedrooms"
+msgstr ""
+
+#: ../patterns/sidebar.php:15
+msgid "Latest Posts"
+msgstr ""
+
+#: ../patterns/sidebar.php:23
+msgid "Categories"
+msgstr ""
+
+#: ../patterns/sidebar.php:31
+msgid "Tags"
+msgstr ""
+
+#: ../patterns/single-product.php:10
+msgid "Single Product"
+msgstr ""
+
+#: ../patterns/single-product.php:58
+msgid "Related Products"
+msgstr ""
+
+#: ../patterns/testimonials.php:12
+msgid "Testimonials"
+msgstr ""
+
+#: ../patterns/testimonials.php:16, ../patterns/testimonials.php:45, ../patterns/testimonials.php:77, ../patterns/testimonials.php:109
+msgid "Fusce egestas elit eget lorem. Praesent nec nisl a purus blandit viverra. Praesent egestas neque eu enim. In ac felis quis tortor malesuada pretium."
+msgstr ""
+
+#: ../patterns/testimonials.php:30, ../patterns/testimonials.php:62, ../patterns/testimonials.php:94
+msgid "John Doe"
+msgstr ""
+
+#: ../patterns/testimonials.php:34, ../patterns/testimonials.php:66, ../patterns/testimonials.php:98
+msgid "Business Owner"
+msgstr ""
+
+#: ../patterns/villa-collection.php:13
+msgid "Best"
+msgstr ""
+
+#: ../patterns/villa-collection.php:13
+msgid "Collection"
+msgstr ""
