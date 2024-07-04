@@ -11,7 +11,7 @@ function preloader() {
 	spinner.style.opacity = 0;
 	setTimeout( function() {
 		spinner.remove();
-	}, 50 );
+	}, 25 );
 }
 
 export function spinner() {

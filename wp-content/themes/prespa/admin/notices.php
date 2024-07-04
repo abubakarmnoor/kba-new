@@ -39,7 +39,7 @@ class prespa_notice {
 
 	public function get_notices() {
 
-		$academiathemes_theme_admin_notices = get_option( 'prespa_admin_notices' );
+		$academiathemes_theme_admin_notices = get_option( 'prespa_admin_custom_notices' );
 		return $academiathemes_theme_admin_notices;
 
 	}
@@ -93,7 +93,7 @@ class prespa_notice {
 				}
 
 				if ( isset($run_update) ) {
-					update_option( 'prespa_admin_notices', $theme_admin_notices );
+					update_option( 'prespa_admin_custom_notices', $theme_admin_notices );
 				}
 
 			}

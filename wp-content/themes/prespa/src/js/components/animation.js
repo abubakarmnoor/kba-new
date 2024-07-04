@@ -38,11 +38,6 @@ export function blocksInViewport() {
 			allElements[ i ].className += ' animated';
 		}
 	}
-	// hero pattern theme preview fix
-	if ( document.querySelector( '.hero-pattern .wp-block-columns' ) ) {
-		const heroPattern = document.querySelector( '.hero-pattern .wp-block-columns' );
-		heroPattern.className += ' animated';
-	}
 	runStatsAnimation();
 }
 
