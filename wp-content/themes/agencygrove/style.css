@@ -5,9 +5,9 @@ Author: Themegrove
 Author URI: https://themegrove.com/
 Description: Welcome to AgencyGrove, the ultimate WordPress Full Site Editing theme designed for businesses, consulting firms, and SEO agencies seeking unparalleled online presence. Engineered with meticulous SEO optimization and seamless compatibility with Gutenberg and WooCommerce, AgencyGrove empowers you to effortlessly craft a dynamic website that captivates your audience and drives growth. With block-based customization and integration with Contact Form 7, AgencyGrove offers unmatched flexibility and functionality, enabling you to showcase your services, engage with clients, and expand your reach with ease. Experience the perfect blend of aesthetics and performance with AgencyGrove, your gateway to success in the digital landscape. Demo: https://demos.themegrove.com/agencygrove/
 Requires at least: 6.0
-Tested up to: 6.5
+Tested up to: 6.6
 Requires PHP: 7.0
-Version: 1.6
+Version: 1.8
 License: GNU General Public License v3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 Text Domain: agencygrove
@@ -114,11 +114,6 @@ select {
 .wp-block-button__link ,
 a.wp-block-post-excerpt__more-link{
   transition: all 0.3s;
-}
-
-.banner-with-header {
-  position: relative;
-  z-index: 99;
 }
 
 .wp-element-button:hover, 
@@ -503,7 +498,7 @@ a.wp-block-post-excerpt__more-link {
 
 .banner-with-header {
   position: relative;
-  z-index: 11;
+  z-index: 11 !important;
 }
 
 .small-icon {

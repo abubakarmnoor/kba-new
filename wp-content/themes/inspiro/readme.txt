@@ -1,8 +1,8 @@
 === Inspiro ===
 Contributors: WPZOOM
 Requires at least: 6.0
-Tested up to: 6.5
-Version: 1.8.7
+Tested up to: 6.6
+Version: 1.9.6
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Tags: one-column, right-sidebar, flexible-header, accessibility-ready, custom-colors, custom-header, custom-menu, custom-logo, editor-style, featured-images, footer-widgets, post-formats, rtl-language-support, sticky-post, theme-options, threaded-comments, translation-ready
@@ -92,6 +92,10 @@ Included as part of the following classes and functions:
 - inspiro_get_theme_svg()
 - inspiro_dropdown_icon_to_menu_link()
 
+Bundled header image, Jeremy Bishop
+License: CC0 1.0 Universal (CC0 1.0)
+Source: https://stocksnap.io/photo/sea-ocean-ECZV5RZKSZ
+
 Bundled header image, Enrapture Media
 License: CC0 1.0 Universal (CC0 1.0)
 Source: https://stocksnap.io/photo/sea-ocean-M6D1GS9PSL
@@ -105,6 +109,34 @@ License: CC0 1.0 Universal (CC0 1.0)
 Source: https://stocksnap.io/photo/autumn-trees-WV0YTVMU7P
 
 == Changelog ==
+
+= 1.9.6 =
+* Added a new WooCommerce demo
+* Minor bug fixes
+
+= 1.9.5 =
+* Improvements to the demo content importer & onboarding process for new users
+
+= 1.9.4 =
+* Multiple bug fixes
+
+= 1.9.3 =
+* Multiple improvements and bug fixes
+
+= 1.9.2 =
+* Added new options to customize in the Customizer > Colors section
+
+= 1.9.1 =
+* Fix the default hero image
+
+= 1.9.0 =
+* Multiple Improvements to the Customizer
+* New Footer option to edit the Copyright text
+* Minor code improvements
+* Add Header hamburger icon color option
+
+= 1.8.8 =
+* Minor bug fixes
 
 = 1.8.7 =
 * Update WooCommerce templates

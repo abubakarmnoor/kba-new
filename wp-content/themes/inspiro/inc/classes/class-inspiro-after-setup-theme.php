@@ -45,8 +45,7 @@ if ( ! class_exists( 'Inspiro_After_Setup_Theme' ) ) {
 		public function __construct() {
 			add_action( 'after_setup_theme', array( $this, 'theme_setup' ) );
 			add_action( 'template_redirect', array( $this, 'theme_content_width' ), 0 );
-			add_action( 'tgmpa_register', array( $this, 'register_required_plugins' ) );
-            add_action( 'tgmpa_register', array( $this, 'register_required_plugins' ) );
+			add_action( 'tgmpa_register', array( $this, 'register_required_plugins' ) ); // this line was duplicated
             add_filter( 'ocdi/register_plugins', array( $this,'ocdi_register_plugins' ) );
             add_filter( 'ocdi/import_files', array( $this,'ocdi_import_files' ) );
             add_action( 'ocdi/after_import', array( $this,'ocdi_after_import_setup' ));
@@ -239,24 +238,17 @@ if ( ! class_exists( 'Inspiro_After_Setup_Theme' ) ) {
 			$GLOBALS['content_width'] = apply_filters( 'inspiro_content_width', $content_width );
 		}
 
-
-
         public function ocdi_register_plugins( $plugins ) {
           $theme_plugins = [
-            [
-                'name'     => 'WPZOOM Portfolio',
-                'slug'     => 'wpzoom-portfolio',
-                'required' => true,
-            ],
             [
                 'name'     => 'Instagram Widget by WPZOOM',
                 'slug'     => 'instagram-widget-by-wpzoom',
                 'required' => false,
             ],
             [
-                'name'     => 'Social Icons Widget by WPZOOM',
-                'slug'     => 'social-icons-widget-by-wpzoom',
-                'required' => false,
+                'name'     => 'WPZOOM Forms',
+                'slug'     => 'wpzoom-forms',
+                'required' => true,
             ],
           ];
 
@@ -268,19 +260,39 @@ if ( ! class_exists( 'Inspiro_After_Setup_Theme' ) ) {
             ) {
 
               // Adding one additional plugin for the first demo import ('import' number = 0).
-              if ( $_GET['import'] === '1' ) {
+              if ( $_GET['import'] === '0' ) {
+
+                $theme_plugins[] =  [
+                    'name'     => 'WPZOOM Portfolio',
+                    'slug'     => 'wpzoom-portfolio',
+                    'required' => true,
+                ];
+             } elseif ( $_GET['import'] === '1' ) {
+
+
                 $theme_plugins[] =  [
                     'name'     => 'Elementor',
                     'slug'     => 'elementor',
                     'required' => true,
                 ];
-
                 $theme_plugins[] = [
                   'name'     => 'Elementor Addons by WPZOOM',
                   'slug'     => 'wpzoom-elementor-addons',
                   'required' => true,
                 ];
-              }
+                $theme_plugins[] =  [
+                    'name'     => 'WPZOOM Portfolio',
+                    'slug'     => 'wpzoom-portfolio',
+                    'required' => true,
+                ];
+              } elseif ( $_GET['import'] === '2' ) {
+
+                $theme_plugins[] =  [
+                    'name'     => 'WooCommerce',
+                    'slug'     => 'woocommerce',
+                    'required' => true,
+                ];
+                }
             }
 
           return array_merge( $plugins, $theme_plugins );
@@ -294,7 +306,7 @@ if ( ! class_exists( 'Inspiro_After_Setup_Theme' ) ) {
               'import_file_url'            => 'https://www.wpzoom.com/downloads/xml/inspiro-lite-blocks.xml',
               'import_widget_file_url'     => 'https://www.wpzoom.com/downloads/xml/inspiro-lite-widgets.wie',
               'import_customizer_file_url' => 'https://www.wpzoom.com/downloads/xml/inspiro-lite-customizer.dat',
-              'import_preview_image_url'   => 'https://www.wpzoom.com/wp-content/uploads/2021/10/inspiro-lite-gutenberg-1.png',
+              'import_preview_image_url'   => 'https://www.wpzoom.com/wp-content/uploads/2024/10/inspiro-lite-block.png',
               'preview_url'                => 'https://demo.wpzoom.com/inspiro-lite-blocks/',
             ],
             [
@@ -304,6 +316,14 @@ if ( ! class_exists( 'Inspiro_After_Setup_Theme' ) ) {
               'import_customizer_file_url' => 'https://www.wpzoom.com/downloads/xml/inspiro-lite-customizer.dat',
               'import_preview_image_url'   => 'https://www.wpzoom.com/wp-content/uploads/2021/10/inspiro-lite-elementor-1.png',
               'preview_url'                => 'https://demo.wpzoom.com/inspiro-lite/',
+            ],
+            [
+              'import_file_name'           => 'Inspiro Lite - WooCommerce Shop',
+              'import_file_url'            => 'https://www.wpzoom.com/downloads/xml/inspiro-lite-woo.xml',
+              'import_widget_file_url'     => 'https://www.wpzoom.com/downloads/xml/inspiro-lite-woo-widgets.wie',
+              'import_customizer_file_url' => 'https://www.wpzoom.com/downloads/xml/inspiro-lite-woo.dat',
+              'import_preview_image_url'   => 'https://www.wpzoom.com/wp-content/uploads/2024/10/inspiro-lite-woo.png',
+              'preview_url'                => 'https://demo.wpzoom.com/inspiro-lite-woo/',
             ],
           ];
         }
@@ -363,18 +383,6 @@ if ( ! class_exists( 'Inspiro_After_Setup_Theme' ) ) {
                     'required' => false,
                 ),
 
-                // array(
-                //     'name'     => 'Elementor',
-                //     'slug'     => 'elementor',
-                //     'required' => false,
-                // ),
-
-                // array(
-                //     'name'     => 'Elementor Addons by WPZOOM',
-                //     'slug'     => 'wpzoom-elementor-addons',
-                //     'required' => false,
-                // ),
-
                 array(
                     'name'     => 'WPZOOM Portfolio',
                     'slug'     => 'wpzoom-portfolio',
@@ -399,12 +407,6 @@ if ( ! class_exists( 'Inspiro_After_Setup_Theme' ) ) {
 					'required' => false,
 				),
 
-				array(
-					'name'     => 'Social Icons Widget by WPZOOM',
-					'slug'     => 'social-icons-widget-by-wpzoom',
-					'required' => false,
-				),
-
 			);
 
 			/*
@@ -420,6 +422,7 @@ if ( ! class_exists( 'Inspiro_After_Setup_Theme' ) ) {
 				'id'           => 'inspiro_wporg',         // Unique ID for hashing notices for multiple instances of TGMPA.
 				'default_path' => '',                      // Default absolute path to bundled plugins.
 				'menu'         => 'tgmpa-install-plugins', // Menu slug.
+                'parent_slug'  => 'inspiro',
 				'has_notices'  => true,                    // Show admin notices or not.
 				'dismissable'  => true,                    // If false, a user cannot dismiss the nag message.
 				'dismiss_msg'  => '',                      // If 'dismissable' is false, this message will be output at top of nag.

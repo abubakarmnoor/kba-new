@@ -715,8 +715,6 @@ class Init {
 	 * @return array
 	 */
 	public function add_template( $template_files, $template_type ) {
-		$directory = get_template_directory();
-
 		if ( 'wp_template' === $template_type ) {
 			$new_templates = array(
 				'about',
@@ -729,7 +727,7 @@ class Init {
 			foreach ( $new_templates as $template ) {
 				$template_files[] = array(
 					'slug'  => $template,
-					'path'  => $directory . "/gutenverse-files/templates/{$template}.html",
+					'path'  => $this->change_stylesheet_directory() . "/templates/{$template}.html",
 					'theme' => get_template(),
 					'type'  => 'wp_template',
 				);
@@ -749,37 +747,35 @@ class Init {
 	 * @return string
 	 */
 	public function template_path( $template_file, $theme_slug, $template_slug ) {
-		$directory = get_template_directory();
-
 		switch ( $template_slug ) {
 			case '404':
-				return $directory . '/gutenverse-files/templates/404.html';
+				return $this->change_stylesheet_directory() . '/templates/404.html';
 			case 'about':
-				return $directory . '/gutenverse-files/templates/about.html';
+				return $this->change_stylesheet_directory() . '/templates/about.html';
 			case 'archive':
-				return $directory . '/gutenverse-files/templates/archive.html';
+				return $this->change_stylesheet_directory() . '/templates/archive.html';
 			case 'blog':
-				return $directory . '/gutenverse-files/templates/blog.html';
+				return $this->change_stylesheet_directory() . '/templates/blog.html';
 			case 'contact':
-				return $directory . '/gutenverse-files/templates/contact.html';
+				return $this->change_stylesheet_directory() . '/templates/contact.html';
 			case 'front-page':
-				return $directory . '/gutenverse-files/templates/front-page.html';
+				return $this->change_stylesheet_directory() . '/templates/front-page.html';
 			case 'index':
-				return $directory . '/gutenverse-files/templates/index.html';
+				return $this->change_stylesheet_directory() . '/templates/index.html';
 			case 'page':
-				return $directory . '/gutenverse-files/templates/page.html';
+				return $this->change_stylesheet_directory() . '/templates/page.html';
 			case 'projects':
-				return $directory . '/gutenverse-files/templates/projects.html';
+				return $this->change_stylesheet_directory() . '/templates/projects.html';
 			case 'search':
-				return $directory . '/gutenverse-files/templates/search.html';
+				return $this->change_stylesheet_directory() . '/templates/search.html';
 			case 'service':
-				return $directory . '/gutenverse-files/templates/service.html';
+				return $this->change_stylesheet_directory() . '/templates/service.html';
 			case 'single':
-				return $directory . '/gutenverse-files/templates/single.html';
+				return $this->change_stylesheet_directory() . '/templates/single.html';
 			case 'header':
-				return $directory . '/gutenverse-files/parts/header.html';
+				return $this->change_stylesheet_directory() . '/parts/header.html';
 			case 'footer':
-				return $directory . '/gutenverse-files/parts/footer.html';
+				return $this->change_stylesheet_directory() . '/parts/footer.html';
 		}
 
 		return $template_file;

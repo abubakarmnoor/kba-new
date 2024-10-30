@@ -9,10 +9,14 @@ import { focusElements } from './helpers';
 export default function navigation() {
 	// header
 	const header = document.getElementById( 'masthead' ) || '';
+
+	if ( ! header ) return;
+
 	//mobile menu
 	const mainNavigation = document.getElementById( 'main-navigation' ) || '';
 	//hamburger menu
 	const menuButtons = document.querySelectorAll( '.site-menu .menu-toggle' );
+
 	// Get all the link elements within the site menu
 	let links = header.getElementsByTagName( 'a' );
 
@@ -39,20 +43,19 @@ export default function navigation() {
 	function toggleMobileMenu( e, $self ) {
 		e.preventDefault();
 		const toggledIcon = $self.childNodes[ 1 ].childNodes[ 1 ] || '';
-		if ( toggledIcon ) {
+		if ( toggledIcon )
 			toggledIcon.checked = ! toggledIcon.checked;
-		}
+
 		const toggledMenu = $self.parentNode;
 		toggledMenu.classList.toggle( 'toggled' );
-		if ( $self.className.indexOf( 'sub-menu-toggle' ) == -1 ) {
+		if ( $self.className.indexOf( 'sub-menu-toggle' ) == -1 )
 			document.body.classList.toggle( 'modal-open' );
-		}
 
-		if ( $self.getAttribute( 'aria-expanded' ) === 'true' ) {
+		if ( $self.getAttribute( 'aria-expanded' ) === 'true' )
 			$self.setAttribute( 'aria-expanded', 'false' );
-		} else {
+		else
 			$self.setAttribute( 'aria-expanded', 'true' );
-		}
+
 		// Remove the .toggled class and set aria-expanded to false when the user clicks outside the navigation.
 		document.addEventListener( 'click', function( e ) {
 			// make a list of elements that will keep modal from closing
@@ -69,11 +72,10 @@ export default function navigation() {
 				'span',
 			];
 			let isClickInside = false;
-			for ( let i = 0; i < tagNames.length; i++ ) {
-				if ( tagNames[ i ] === e.target.tagName.toLowerCase() ) {
+			for ( let i = 0; i < tagNames.length; i++ )
+				if ( tagNames[ i ] === e.target.tagName.toLowerCase() )
 					isClickInside = true;
-				}
-			}
+
 			//Close the modal when user clicks outside the menu links and the hamburger
 			if ( ! isClickInside ) {
 				toggledMenu.className = toggledMenu.className.replace(
@@ -85,9 +87,8 @@ export default function navigation() {
 					''
 				);
 				$self.setAttribute( 'aria-expanded', 'false' );
-				if ( toggledIcon ) {
+				if ( toggledIcon )
 					toggledIcon.checked = false;
-				}
 			}
 		} );
 	}
@@ -97,9 +98,9 @@ export default function navigation() {
 		links = header.getElementsByTagName( 'a' );
 
 		for ( let i = 0, len = links.length; i < len; i++ ) {
-			if ( window.matchMedia( '(max-width: 864px)' ).matches ) {
+			if ( window.matchMedia( '(max-width: 864px)' ).matches )
 				return;
-			}
+
 			links[ i ].addEventListener( 'focus', toggleFocus, true );
 			links[ i ].addEventListener( 'blur', toggleFocus, true );
 		}
@@ -119,13 +120,12 @@ export default function navigation() {
 				-1 === self.className.indexOf( 'nav-menu' )
 			) {
 				// On li elements toggle the class .focus.
-				if ( 'li' === self.tagName.toLowerCase() ) {
-					if ( -1 !== self.className.indexOf( 'focus' ) ) {
+				if ( 'li' === self.tagName.toLowerCase() )
+					if ( -1 !== self.className.indexOf( 'focus' ) )
 						self.className = self.className.replace( ' focus', '' );
-					} else {
+					else
 						self.className += ' focus';
-					}
-				}
+
 				self = self.parentNode;
 			}
 		}
@@ -135,9 +135,8 @@ export default function navigation() {
 			e.preventDefault();
 			for ( let i = 0; i < menuItem.parentNode.children.length; ++i ) {
 				const link = menuItem.parentNode.children[ i ];
-				if ( menuItem !== link ) {
+				if ( menuItem !== link )
 					link.classList.remove( 'focus' );
-				}
 			}
 			menuItem.classList.toggle( 'focus' );
 		}
@@ -150,9 +149,9 @@ export default function navigation() {
 
 	// Set the trap. Loop through mobile menu items on focus until the menu is closed
 	function mobileMenuFocusTrap( $self ) {
-		if ( window.matchMedia( '(min-width: 864px)' ).matches ) {
+		if ( window.matchMedia( '(min-width: 864px)' ).matches )
 			return;
-		}
+
 		const focusableItems = header.querySelectorAll(
 			'.menu-toggle, .menu-item > a, .social-icon > a, .site-header-cart > a, .search-icon > button, .dark-mode-widget'
 		);
@@ -160,9 +159,9 @@ export default function navigation() {
 		const lastFocusableElement = focusableItems[ focusableItems.length - 1 ]; // get last element to be focused inside modal
 
 		mainNavigation.addEventListener( 'keydown', function( e ) {
-			if ( $self.getAttribute( 'aria-expanded' ) == 'false' ) {
+			if ( $self.getAttribute( 'aria-expanded' ) == 'false' )
 				return;
-			}
+
 			if ( e.keyCode == '27' ) {
 				// Escape key
 				toggleMobileMenu( e, this.firstElementChild );
@@ -174,9 +173,9 @@ export default function navigation() {
 
 	// Search modal focus trap
 	function searchModalFocusTrap() {
-		if ( window.matchMedia( '(max-width: 864px)' ).matches ) {
+		if ( window.matchMedia( '(max-width: 864px)' ).matches )
 			return;
-		}
+
 		const focusableItems = this.querySelectorAll(
 			'input, .search-form button, .close'
 		);
@@ -197,11 +196,10 @@ export default function navigation() {
 		.querySelector( '#search-open .close' )
 		.addEventListener( 'keydown', function( e ) {
 			// Number 13 is the "Enter" key on the keyboard
-			if ( e.keyCode === 13 ) {
+			if ( e.keyCode === 13 )
 				setTimeout( function() {
 					document.querySelector( '.search-icon a' ).focus();
 				}, 100 );
-			}
 		} );
 	// Resume keyboard navigation after search modal is closed via button click
 	document
@@ -214,30 +212,27 @@ export default function navigation() {
 
 	// Skip mobile menu if not opened
 	function mobileMenuFocusSkip() {
-		if ( window.matchMedia( '(min-width: 864px)' ).matches ) {
+		if ( window.matchMedia( '(min-width: 864px)' ).matches )
 			return;
-		}
+
 		const buttons = document.querySelectorAll( '.slide-menu button' );
 		menuButtons[ 0 ].addEventListener( 'keydown', function( e ) {
 			if (
 				this.getAttribute( 'aria-expanded' ) == 'false' &&
 				e.keyCode !== 13
 			) {
-				for ( let i = 0; i < links.length; i++ ) {
-					if ( links[ i ].parentNode.tagName.toLowerCase() == 'li' ) {
+				for ( let i = 0; i < links.length; i++ )
+					if ( links[ i ].parentNode.tagName.toLowerCase() == 'li' )
 						links[ i ].setAttribute( 'tabindex', '-1' );
-					}
-				}
-				for ( let i = 0; i < buttons.length; i++ ) {
+
+				for ( let i = 0; i < buttons.length; i++ )
 					buttons[ i ].setAttribute( 'tabindex', '-1' );
-				}
 			} else {
-				for ( let i = 0; i < links.length; i++ ) {
+				for ( let i = 0; i < links.length; i++ )
 					links[ i ].removeAttribute( 'tabindex' );
-				}
-				for ( let i = 0; i < buttons.length; i++ ) {
+
+				for ( let i = 0; i < buttons.length; i++ )
 					buttons[ i ].removeAttribute( 'tabindex' );
-				}
 			}
 		} );
 	}

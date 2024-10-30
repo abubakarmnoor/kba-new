@@ -98,7 +98,7 @@
 			],
 			"palette": [
 				{
-					"color": "#ACFE32",
+					"color": "#e4201a",
 					"name": "Primary",
 					"slug": "primary"
 				},
@@ -173,7 +173,7 @@
 					"slug": "accent-7"
 				},
 				{
-					"color": "#3AB21F",
+					"color": "#ee6b67",
 					"name": "Button Hover Color",
 					"slug": "button-hover-color"
 				}

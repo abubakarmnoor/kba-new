@@ -1,9 +1,9 @@
 === AgencyGrove ===
 Contributors: Themegrove
 Requires at least: 6.0
-Tested up to: 6.5
+Tested up to: 6.6
 Requires PHP: 5.6
-Stable tag: 1.6
+Stable tag: 1.8
 License: GPLv3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -87,6 +87,12 @@ Url: https://animate.style/
 License: The Hippocratic License
 License Url: https://firstdonoharm.dev/
 Source: https://github.com/animate-css/animate.css/tree/main
+
+= 1.8 =
+* Footer pattern fixed
+
+= 1.7 =
+* Style fixed, New footer pattern added
 
 = 1.6 =
 * Style fixed, Screenshot chnaged
